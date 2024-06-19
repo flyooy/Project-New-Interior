@@ -9,6 +9,10 @@ img{
     max-width: 100%;
 }
 
+html{
+    background-color: rgba(250, 235, 215, 0.25);
+}
+
 @font-face {
     font-family: Alegreya_SC_Light;
     src: url("../fonts/Alegreya_Sans_SC/AlegreyaSansSC-Light.ttf");
@@ -24,7 +28,7 @@ img{
     src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf");
 }
 
-p{
+p, a{
     font-family: Helvetica, Alegreya_SC_Light, Arial ;
 }
 
@@ -45,13 +49,16 @@ p{
     transition: all 0.3s ease;
     padding-top: 2px;
 }
+
 .hamburger div:nth-child(1) {
     top: 0;
 }
+
 .hamburger div:nth-child(2) {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .hamburger div:nth-child(3) {
     bottom: 0;
 }
@@ -102,6 +109,8 @@ header nav{
     font-family: Alegreya_SC_Light, Arial, Helvetica;
 }
 
+/* * Section "Our Latest Works"  */
+
 main .Our_works article{
     display: flex;
     justify-content: space-between;
@@ -122,9 +131,10 @@ main .Our_works article div p{
     font-size: 0.8rem;
 }
 
-.btn{
+.Our_works .btn{
     border: 1px solid rgba(0, 0, 0, 0.574);
     padding: 10px 10px;
+    margin-left: auto;
     
 }
 
@@ -134,7 +144,7 @@ a{
     color: #3A4F52;
 }
 
-.container {  display: grid;
+ .container {  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px 20px;
@@ -142,9 +152,6 @@ a{
     grid-template-areas:
       "img img2 img3"
       "img4 img5 img6";
-
-     
-     
       margin: 0 14% 4%; 
   }
   
@@ -155,6 +162,7 @@ a{
   .img5_link { grid-area: img5; }
   .img6_link { grid-area: img6; }
   
+/* * Section "Our Services"  */
 
   .Our_services{
     background-image: url("../img/services.png");
@@ -214,5 +222,142 @@ a{
     
   }
 
+  /*  *Section "From the Blog"  */
 
+  .From_blog article {
+    margin: 3% 8%;
+}
+
+.wrapper_from_the_blog {
+    display: flex;
+    justify-content: space-around;
+    align-items:  center;
+    margin: 0 4%;
+}
+
+.wrapper_text {
+    
+    margin-bottom: 3%;
+    
+}
+
+.wrapper_text h2 {
+    font-family: Alegreya_Black, Arial, Helvetica;
+    color: #3A4F52;
+    margin-bottom: 3%;
+    font-size: 2rem;
+}
+
+.wrapper_text p {
+    font-family: Helvetica, Alegreya_SC_Light, Arial;
+    color: #6A6A6A;
+    font-size: 0.8rem;
+ 
+}
+
+.From_blog .btn {
+    margin-bottom: 2%;
+    border: 1px solid rgba(0, 0, 0, 0.574);
+    padding: 10px 10px;
+    margin-left: auto;
+   
+}
+
+  .From_blog .container {  
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px 20px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "read_more_1 read_more_2 read_more_3";
+          margin-right: 6%;
+          margin-left: 7%;
+          padding: 2%;
+      }
+      
+      .read_more_1 { grid-area: read_more_1; }
+      .read_more_2 { grid-area: read_more_2; }
+      .read_more_3 { grid-area: read_more_3; }
+      
   
+.From_blog .container h2{
+    font-family: Alegreya_Black, Arial, Helvetica;
+    color: #3A4F52;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-size: 2rem;
+}
+
+.From_blog .container span{
+    font-style: italic;
+    color: #6A6A6A;
+    margin-bottom: 3%;
+}
+
+.From_blog .container p{
+    color: #6A6A6A;
+    font-size: 0.8rem;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding-right:2% ;
+}
+
+.From_blog .container a{
+    color: #4DA7CA;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+/* * <!-- *Section "Get a free quote" (Text inner button)--> */
+
+.Get_free{
+    background-image: url("../img/parallax.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 35vh;
+    background-attachment: fixed; 
+    padding-top: 1%;
+    margin-bottom: 3%;
+  }
+
+  .Get_free article {
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.197);
+    margin: 2% 10% 0 ;
+    height: 260px;
+    height: auto;
+    justify-content: center; 
+    align-items: center; 
+    padding: 1% 4%;
+  }
+
+  .Get_free article h1{
+
+    text-align: center;
+    color: white;
+    text-align: justify;
+    font-size: 2rem;
+    margin-top: 1%;
+    font-weight: 800;
+    font-family: Alegreya_SC_Light, Arial, Helvetica;
+  }
+
+  .Get_free .btn{
+    text-align: center;
+    border: 1px solid white;
+    margin-top: 50px; 
+    padding: 10px 10px;
+  }
+
+  .Get_free .btn a{
+    color: white;
+    display: inline-block; 
+    padding: 3px 13px; 
+    font-weight: 200;
+  }
+
