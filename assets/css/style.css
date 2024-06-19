@@ -68,7 +68,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
    
 }
 
@@ -77,6 +77,10 @@ header h1{
     color: white;
     font-family: Alegreya_SC_Light, Arial, Helvetica;
     font-size: 2rem;
+}
+
+header h1:hover{
+    text-decoration: underline;
 }
 
 header nav{
@@ -137,14 +141,22 @@ main .Our_works article div p{
     margin-left: auto;
     
 }
+.Our_works .btn:hover {
+    background-color: #3A4F52;
+    color: white;
+}
+
+.Our_works .btn:hover a {
+    color: white;
+}
 
 a{
-    
     text-decoration: none;
     color: #3A4F52;
 }
 
- .container {  display: grid;
+ .container {  
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px 20px;
@@ -153,8 +165,9 @@ a{
       "img img2 img3"
       "img4 img5 img6";
       margin: 0 14% 4%; 
+      
   }
-  
+
   .img_link { grid-area: img; }
   .img2_link { grid-area: img2; }
   .img3_link { grid-area: img3; }
@@ -162,6 +175,72 @@ a{
   .img5_link { grid-area: img5; }
   .img6_link { grid-area: img6; }
   
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(10, 107, 91); 
+    opacity: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    
+}
+
+  .container > div {
+    position: relative; 
+    overflow: hidden; 
+    
+}
+
+.Our_works .container > div:hover .overlay {
+    opacity: 0.5;
+}
+
+.Our_works .container > div:hover img {
+    transform: scale(1.3);
+    transform-origin: center;
+}
+
+.Our_works .container > div:hover img {
+    transform: scale(1.3); 
+}
+
+.Our_works .container img {
+    max-width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    
+}
+
+.overlay .btn {
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    border: 2px solid white; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+  
+.overlay .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay .btn:hover{
+    background-color: white;
+    color: grey;
+    border-color: white;
+}
+
 /* * Section "Our Services"  */
 
   .Our_services{
@@ -181,7 +260,7 @@ a{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.197);
-    margin: 10% 5% ;
+    margin: 5% 5% ;
     height: 370px;
   }
 
@@ -263,6 +342,17 @@ a{
    
 }
 
+
+.From_blog .btn:hover {
+    background-color: #3A4F52;
+    color: white;
+}
+
+.From_blog .btn:hover a {
+    color: white;
+}
+
+
   .From_blog .container {  
     display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -308,6 +398,9 @@ a{
     font-weight: 200;
     font-size: 0.8rem;
 }
+.From_blog .container a:hover{
+    text-decoration: underline;
+}
 
 /* * <!-- *Section "Get a free quote" (Text inner button)--> */
 
@@ -317,7 +410,7 @@ a{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 35vh;
+    height: 40vh;
     background-attachment: fixed; 
     padding-top: 1%;
     margin-bottom: 3%;
@@ -328,7 +421,7 @@ a{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.197);
-    margin: 2% 10% 0 ;
+    margin: 3% 10% 0 ;
     height: 260px;
     height: auto;
     justify-content: center; 
@@ -361,3 +454,156 @@ a{
     font-weight: 200;
   }
 
+  .Get_free .btn:hover{
+    background-color:white;
+    color: grey;
+}
+
+.Get_free .btn:hover a {
+    color: grey;
+}
+
+  /* * <!-- * Section Testimonials --> */
+
+  .testimonials h1, p{
+    text-align: center;
+  }
+
+  .testimonials h1{
+  font-weight: 1000;
+  font-family: Alegreya_SC_Light, Arial, Helvetica;
+  font-size: 2rem;
+  margin-bottom: 1%;
+  }
+
+  .testimonials  p{
+    color: #6A6A6A;
+    font-size: 0.8rem;
+  }
+
+  .testimonials article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  .testimonials article div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 3%;
+   
+  }
+
+  .testimonials article div img{
+    width: 35%;
+    margin-bottom: 2%;
+  }
+
+  .testimonials article div p,h5{
+    color: #6A6A6A;
+    margin-top: 5px;
+  }
+
+  .testimonials article div p{
+    margin-bottom: 3%;
+    width: 75%;
+  }
+
+
+  /* * <!-- * Section Contact US --> */
+
+  .Contact_us{
+    background-image: url("../img/contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center; 
+    padding-top: 4%;
+  }
+
+  .Contact_us article {
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.197);
+    margin: 0% 2% 5%;
+    height: auto;
+    width: 1000px;
+  }
+
+  .Contact_us h2{
+    text-align: center;
+    color: white;
+    font-weight: 1000;
+  font-family: Alegreya_SC_Light, Arial, Helvetica;
+  font-size: 2rem;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  }
+
+  .Contact_us p{
+    color: white;
+    margin-bottom: 1%;
+  }
+
+  .form_contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+      color: white;
+      padding: 2%;
+  }
+
+   #name, #email,#message,#submit{
+    margin: 4px 0;
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: transparent ;
+    border: 1px solid white;
+   }
+
+   #message{
+    height: 40px;
+   }
+
+   #submit{
+    width: 70px;
+    height: 30px;
+    border-radius: 0px;
+    color: white;
+   }
+
+
+
+
+  /* !Footer */
+
+  footer div{
+    height: 100px;
+    width: 100%;
+    background-color:#2B3E51;
+  }
+
+  footer div p{
+    color: white;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 3% 10% 0 0;
+    margin-left: 5%;
+  }
