@@ -181,7 +181,7 @@ a{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(10, 107, 91); 
+    background-color:  #02383A; 
     opacity: 0; 
     display: flex;
     justify-content: center;
@@ -407,7 +407,7 @@ a{
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-attachment: fixed; 
     padding-top: 1%;
     margin-bottom: 3%;
@@ -418,7 +418,7 @@ a{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.197);
-    margin: 1% 10% 0 ;
+    margin: 3% 10% 0 ;
     height: 260px;
     height: auto;
     justify-content: center; 
@@ -533,8 +533,8 @@ a{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.197);
-    margin: 1% 2% 5%;
-    height: 300px;
+    margin: 0 2% 7%;
+    height: 290px;
     width: 1000px;
   }
 
@@ -587,9 +587,6 @@ a{
     color: white;
    }
 
-
-
-
   /* !Footer */
 
   footer div{
@@ -606,7 +603,9 @@ a{
     margin-left: 5%;
   }
 
-/* ! Media Tablet */
+
+
+/* # Media Tablet */
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -616,7 +615,7 @@ a{
     header{
        
         background-size: contain;
-        width: 100vw;
+        width: 100%;
         height: 47vh;
        
     }
@@ -744,5 +743,211 @@ a{
   #submit{
     margin-top: 2%;
   }
+
+}
+
+/* # Media Mobile */
+
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+
+  /* *Header  */
+
+  header{
+       
+    background-size: contain;
+    width: 100%;
+    height: 47vh;
+   
+}
+
+.slim{
+    margin: 13% auto 3px;
+    font-size: 1.9rem;
+}
+
+.text_header h3{
+
+    font-size: 1rem;
+}
+
+ /* * Section Our Latest Works */
+    
+ .Our_works {
+  margin-top: -20%;
+  margin-bottom: 10%;
+}
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas: 
+    "img"
+    "img2"
+    "img3"
+    "img4"
+    "img5"
+    "img6"; 
+}
+
+.img_link { grid-area: img; }
+.img2_link { grid-area: img2; }
+.img3_link { grid-area: img3; }
+.img4_link { grid-area: img4; }
+.img5_link { grid-area: img5; }
+.img6_link { grid-area: img6; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02383A; 
+  opacity: 0.5; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.container > div {
+  position: relative; 
+}
+
+.overlay .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.Our_works .btn {
+  padding: 10px 6px;
+}
+
+.Our_works .btn a{
+  width: 100%;
+}
+
+
+ /* * Section Our Services */
+
+ .Our_services{
+  background-size: cover;
+  background-attachment: local; 
+  height: 75vh;
+}
+
+.Our_services article {
+  height: 530px;
+  margin-top: 3%;
+}
+
+.Our_services article .wrapper_services{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.Our_services article div img{
+  width: 10%;
+}
+
+/* * Section From the Blog */
+
+.From_blog .container {  
+  display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "read_more_1"
+        "read_more_2" 
+        "read_more_3";
+        padding: 2%;
+  margin-top: 4%;
+    }
+    
+    .read_more_1 { grid-area: read_more_1; }
+    .read_more_2 { grid-area: read_more_2; }
+    .read_more_3 { grid-area: read_more_3; }
+    
+    .From_blog .container > div{
+      margin-top: -20%;
+    }
+   
+    .From_blog .wrapper_from_the_blog{
+      margin-bottom: 60px;
+    }
+
+    .From_blog .wrapper_text p{
+      margin-left: 3px;
+    }
+
+    .From_blog .container a{
+      margin-left: 2px;
+    }
+
+    .From_blog .container h2{
+      font-size: 1.4rem;
+    }
+
+    .From_blog .container p{
+      text-align: left;
+    }
+
+     /* * Section  Get a free quote */
+
+.Get_free{
+    
+  height: 60vh;
+  background-size: cover;
+  background-attachment: local; 
+}
+
+.Get_free article {
+  margin: 20% 5% 0 ;
+  height: 300px;
+}
+
+.Get_free article h1{
+
+  font-size: 1.5rem;
+  margin-top: 1%;
+  font-weight: 800;
+ 
+}
+
+/* *  Section  Testimonials */
+
+.testimonials article{
+  flex-direction: column;
+}
+
+.testimonials article div img{
+  width: 25%;
+}
+
+/* *  Section  Contact US */
+  
+.Contact_us{
+  background-size: cover;
+  background-attachment: local; 
+}
+
+.Contact_us article {
+  margin: 8% 2% 4%;
+  height: 300px;
+}
+
+#name, #email,#message{
+  width: 300px;
+}
+
+#submit{
+  margin-top: 2%;
+}
+
 
 }
